@@ -1,36 +1,48 @@
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
+import { Button, View, Text,StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import AssetExample from './components/AssetExample'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-// You can import from local files
-import AssetExample from './components/AssetExample';
-
-// or any pure javascript modules available in npm
-import { Card } from 'react-native-paper';
-
-export default function App() {
+function HomeScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-      
- 
-        <AssetExample />
-    
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate('Play store')}
+      />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#232323',
-    padding: 8,
-  },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});
+function DetailsScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <Text>Details Screen</Text>
+      <Button
+        title="Go to Details... again"
+        onPress={() => navigation.push('Play store')}
+      />
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Button title="Go back" onPress={() => navigation.goBac('Play store')} />
+    </View>
+  );
+}
+
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="Play store" component={AssetExample} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+
+export default App;
