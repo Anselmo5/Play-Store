@@ -66,24 +66,24 @@ const SECTIONS = [
     data: [
       {
         key: '1',
-        text: 'Genshin Impact',
-        uri: 'https://play-lh.googleusercontent.com/kp-90Yulh8aEg_uL8convCrERwGU8ooRNzOO-iEcoMx-OgoIBg2kVKkgQ9YxfUsYJn8=w240-h480-rw',
+        text: 'Nubank',
+        uri: 'https://play-lh.googleusercontent.com/NPkx0aiwABB31gBw_CuZO9Rwukhir-BwemxfNlAVjT6smwk6QgUbb3XrmsSSClfzk0dY=w240-h480-rw',
       },
       {
         key: '2',
-        text: 'FIFA Futebol',
-        uri: 'https://play-lh.googleusercontent.com/MUc561H_AeA4lUfUzyo0-6ZgikC6xrblMMPcbOTNC61iXb9hbfV9guj5IKiXAMfpumJw',
+        text: 'Shopee',
+        uri: 'https://play-lh.googleusercontent.com/DV_4Ktbg06Tv1kbIBwmAsiVLWozguN86QTlUwNb4SKb1ZECmrC4xr1HErRY7lgyTOSU',
       },
 
       {
         key: '3',
-        text: 'Asphalt 8 ',
-        uri: 'https://play-lh.googleusercontent.com/ByyTQSYPN_XkTMNxqt7XTGmTN0zISWPTxvxJ9QKXSB_SBppnw4PBBojy9UTrRsKLEMfQ',
+        text: 'gov.br',
+        uri: 'https://play-lh.googleusercontent.com/qn6t9aaqbxUJDl9SMRlBkgG6SArPRfk_g_m5lyG6SjhpUfiW1PsHuJ6jSuL9GVDqnA',
       },
       {
         key: '4',
-        text: 'Minecraft',
-        uri: 'https://play-lh.googleusercontent.com/VSwHQjcAttxsLE47RuS4PqpC4LT7lCoSjE7Hx5AW_yCxtDvcnsHHvm5CTuL5BPN-uRTP',
+        text: 'CapCut ',
+        uri: 'https://play-lh.googleusercontent.com/MO4jVMbqskWrBD7BDUiKkymLPDMlSFjnEE-JTCigWv6UcoENgAkSKr8bs0IvPs8Twv8=w240-h480-rw',
       },
       {
         key: '5',
