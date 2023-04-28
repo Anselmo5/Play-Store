@@ -1,18 +1,16 @@
 import * as React from 'react';
-import FlatList from '../Flatlist/Emalta';
-import { Text, View, StyleSheet, Image, TextInput,Card, Linking,Button, Pressable, } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import Alta from './ProfileALte1.JS';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Text, View, StyleSheet, Image, TextInput,Card, Linking,Button, Pressable, } from 'react-native';
+import Crian from '../Flatlist/Crian';
 
-
-export default function AssetExample({navigation}) {
+export default function Criancao({navigation}) {
 
   const alerta = () => {
     alert("funcionou")
   }
-  const Stack = createNativeStackNavigator();
 
+  const Stack = createNativeStackNavigator();
   return (
     <View style={styles.container}>      
       <Image style={styles.logo} source={require('../assets/d.jpg')} />
@@ -20,20 +18,21 @@ export default function AssetExample({navigation}) {
        placeholder="Pesquisar Apps e Jogos"
       />
 
+ 
       <View style={styles.textform}> 
-        <Pressable  style={styles.text2}  onPress={() => navigation.navigate('EmAlta')}>
-          <Text style={styles.text1} >Em Alta</Text>
+        <Pressable  style={styles.text2}  onPress={() => navigation.navigate('PlayStore')}>
+          <Text style={styles.text1} >Para Voce</Text>
         </Pressable>
-        <Pressable style={styles.text3}  onPress={() => navigation.navigate('Crianças')}>
-          <Text style={styles.text1} >Crianca</Text>
+        <Pressable style={styles.text3}  onPress={() => navigation.navigate('EmAlta')}>
+          <Text style={styles.text1} >Em Alta</Text>
         </Pressable>
         <Pressable style={styles.text4}  onPress={() => navigation.navigate('Eventos')}>
           <Text style={styles.text1} >Eventos</Text>
         </Pressable>
       </View>
-      <FlatList/>
-</View>
-);
+      <Crian/>
+      </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -71,11 +70,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection:'row',
-    marginRight:110,
+    marginRight:100,
 
   },
   text1:{
     color:'#fff',
     margin:10,
-  },
+  }
 });

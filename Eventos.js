@@ -1,17 +1,13 @@
 import * as React from 'react';
-import FlatList from '../Flatlist/Emalta';
-import { Text, View, StyleSheet, Image, TextInput,Card, Linking,Button, Pressable, } from 'react-native';
+import Event from '../Flatlist/Event'
 import { NavigationContainer } from '@react-navigation/native';
-import Alta from './ProfileALte1.JS';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-
-export default function AssetExample({navigation}) {
+import { Text, View, StyleSheet, Image, TextInput,Card, Linking,Button, Pressable, } from 'react-native';
+export default function Eventos({navigation}) {
 
   const alerta = () => {
     alert("funcionou")
   }
-  const Stack = createNativeStackNavigator();
 
   return (
     <View style={styles.container}>      
@@ -19,21 +15,19 @@ export default function AssetExample({navigation}) {
        <TextInput style={styles.input}
        placeholder="Pesquisar Apps e Jogos"
       />
-
-      <View style={styles.textform}> 
-        <Pressable  style={styles.text2}  onPress={() => navigation.navigate('EmAlta')}>
+    <View style={styles.textform}> 
+        <Pressable  style={styles.text2}  onPress={() => navigation.navigate('PlayStore')}>
+          <Text style={styles.text1} >Para Voce</Text>
+        </Pressable>
+        <Pressable style={styles.text3}  onPress={() => navigation.navigate('EmAlta')}>
           <Text style={styles.text1} >Em Alta</Text>
         </Pressable>
-        <Pressable style={styles.text3}  onPress={() => navigation.navigate('Crianças')}>
-          <Text style={styles.text1} >Crianca</Text>
-        </Pressable>
-        <Pressable style={styles.text4}  onPress={() => navigation.navigate('Eventos')}>
-          <Text style={styles.text1} >Eventos</Text>
+        <Pressable style={styles.text4}  onPress={() => navigation.navigate('Crianças')}>
+          <Text style={styles.text1} >Criancas</Text>
         </Pressable>
       </View>
-      <FlatList/>
-</View>
-);
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -71,11 +65,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection:'row',
-    marginRight:110,
+    marginRight:100,
 
   },
   text1:{
     color:'#fff',
     margin:10,
-  },
+  }
 });

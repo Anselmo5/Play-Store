@@ -1,8 +1,10 @@
 import * as React from 'react';
-import Profile from './Profile';
+import Profile from '../Flatlist/Profile';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Text, View, StyleSheet, Image, TextInput,Card, Linking,Button, Pressable, } from 'react-native';
 
-export default function ProfileALte1() {
+export default function ProfileALte1({navigation}) {
 
   const alerta = () => {
     alert("funcionou")
@@ -14,20 +16,18 @@ export default function ProfileALte1() {
        <TextInput style={styles.input}
        placeholder="Pesquisar Apps e Jogos"
       />
-
-      <View style={styles.textform}> 
-        <Pressable onPress={() => alerta()}>
-          <Text style={styles.text1} >Para Você</Text>
+    <View style={styles.textform}> 
+        <Pressable  style={styles.text2}  onPress={() => navigation.navigate('PlayStore')}>
+          <Text style={styles.text1} >Para Voce</Text>
         </Pressable>
-
-        <Pressable style={styles.text3}  onPress={() => alerta()}>
-          <Text style={styles.text1} >Crianca</Text>
+        <Pressable style={styles.text3}  onPress={() => navigation.navigate('Crianças')}>
+          <Text style={styles.text1} >Criancas</Text>
         </Pressable>
-        <Pressable style={styles.text4}  onPress={() => alerta()}>
+        <Pressable style={styles.text4}  onPress={() => navigation.navigate('Eventos')}>
           <Text style={styles.text1} >Eventos</Text>
         </Pressable>
-      
       </View>
+      
   <Profile/>
     </View>
   );
