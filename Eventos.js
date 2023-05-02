@@ -3,6 +3,7 @@ import Event from '../Flatlist/Event'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Text, View, StyleSheet, Image, TextInput,Card, Linking,Button, Pressable, } from 'react-native';
+import Evens from '../Flatlist/Event'
 export default function Eventos({navigation}) {
 
   const alerta = () => {
@@ -26,6 +27,7 @@ export default function Eventos({navigation}) {
           <Text style={styles.text1} >Criancas</Text>
         </Pressable>
       </View>
+      <Evens/>
     </View>
   );
 }
